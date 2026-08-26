@@ -13,10 +13,10 @@ export const ProductRating = ({
     <div className={`flex items-center gap-4 delay-100`}>
       <div className="flex items-center gap-1">
         <StarRating rating={rating} />
-        <span className="font-semibold text-gray-900 ml-1">{rating}</span>
+        <span className="font-semibold text-gray-600 ml-1">{rating}</span>
       </div>
       <Separator orientation="vertical" className="h-5" />
-      <span className="text-sm text-gray-500 hover:text-gray-900 cursor-pointer transition-colors">
+      <span className="text-sm text-gray-500 hover:text-gray-600 cursor-pointer transition-colors">
         {reviewCount} reviews
       </span>
     </div>

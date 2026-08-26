@@ -4,42 +4,13 @@ import {
   ShoppingBag,
   Shield,
   Truck,
-  Sparkles,
   Star,
 } from "lucide-react";
 import { motion, Variants } from "motion/react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { ProductGridItem } from "./product-grid-item";
 
-type Particle = {
-  id: number;
-  top: number;
-  left: number;
-  duration: number;
-  xOffset: number;
-  delay: number;
-};
-
 export default function HeroSection() {
-  const [particles, setParticles] = useState<Particle[]>([]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const generatedParticles = [...Array(6)].map((_, i) => ({
-        id: i,
-        top: 20 + Math.random() * 60,
-        left: 10 + i * 15,
-        duration: 5 + Math.random() * 3,
-        xOffset: Math.random() * 50 - 25,
-        delay: i * 0.8,
-      }));
-      setParticles(generatedParticles);
-    }, 0);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   const products = [
     {
       id: 1,
@@ -121,7 +92,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-linear-to-br from-blue-600 via-blue-700 to-indigo-900">
+    <section className="relative w-full min-h-screen overflow-hidden bg-linear-to-br from-neutral-600 via-neutral-700 to-neutral-600">
       <motion.div
         animate={{
           scale: [1, 1.2, 1],
@@ -132,7 +103,7 @@ export default function HeroSection() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-0 right-0 w-96 h-96 bg-blue-400 rounded-full blur-3xl"
+        className="absolute top-0 right-0 w-96 h-96 bg-neutral-400 rounded-full blur-3xl"
       />
       <motion.div
         animate={{
@@ -145,7 +116,7 @@ export default function HeroSection() {
           ease: "easeInOut",
           delay: 1,
         }}
-        className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-500 rounded-full blur-3xl"
+        className="absolute bottom-0 left-0 w-96 h-96 bg-neutral-500 rounded-full blur-3xl"
       />
 
       <div className="absolute inset-0 opacity-10">
@@ -158,32 +129,6 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* 3. Iterate over 'particles' state directly.
-        Initially this is empty (so server matches client). 
-        After mount + 0ms timeout, this populates with random data.
-      */}
-      {particles.map((particle) => (
-        <motion.div
-          key={particle.id}
-          className="absolute w-2 h-2 bg-white/20 rounded-full"
-          animate={{
-            y: [0, -100, 0],
-            x: [0, particle.xOffset, 0],
-            opacity: [0, 1, 0],
-          }}
-          transition={{
-            duration: particle.duration,
-            repeat: Infinity,
-            delay: particle.delay,
-            ease: "easeInOut",
-          }}
-          style={{
-            left: `${particle.left}%`,
-            top: `${particle.top}%`,
-          }}
-        />
-      ))}
-
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:px-8 lg:py-24">
         <motion.div
           variants={containerVariants}
@@ -192,17 +137,10 @@ export default function HeroSection() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
         >
           <div className="text-white space-y-8">
-            <motion.div variants={itemVariants} className="inline-block">
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2">
-                <Sparkles className="w-4 h-4 text-yellow-300" />
-                <span className="text-sm">Trusted by 50,000+ customers</span>
-              </div>
-            </motion.div>
-
             <motion.div variants={itemVariants} className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight leading-none">
                 <span className="block">Shop</span>
-                <span className="block bg-linear-to-r from-blue-200 via-white to-blue-100 bg-clip-text text-transparent">
+                <span className="block bg-linear-to-r from-neutral-200 via-white to-neutral-100 bg-clip-text text-transparent">
                   Everything
                 </span>
                 <span className="block">You Need</span>
@@ -210,7 +148,7 @@ export default function HeroSection() {
 
               <motion.p
                 variants={itemVariants}
-                className="text-lg md:text-xl text-blue-100 max-w-xl leading-relaxed"
+                className="text-lg md:text-xl text-neutral-100 max-w-xl leading-relaxed"
               >
                 From fashion and electronics to tools and home essentials.
                 Quality products, unbeatable prices, delivered to your door.
@@ -224,18 +162,11 @@ export default function HeroSection() {
               <Link href="/products">
                 <motion.button
                   whileHover={{
-                    scale: 1.05,
                     boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
                   }}
                   whileTap={{ scale: 0.98 }}
-                  className="group relative px-8 py-5 bg-white text-blue-600 rounded-full transition-all duration-300 shadow-2xl overflow-hidden"
+                  className="group relative px-8 py-5 bg-white text-neutral-600 rounded-full transition-all duration-300 shadow-2xl overflow-hidden cursor-pointer"
                 >
-                  <motion.div
-                    className="absolute inset-0 bg-linear-to-r from-blue-100 to-white"
-                    initial={{ x: "100%" }}
-                    whileHover={{ x: 0 }}
-                    transition={{ duration: 0.3 }}
-                  />
                   <span className="relative flex items-center justify-center gap-2 text-lg z-10">
                     <ShoppingBag className="w-5 h-5" />
                     <span>Start Shopping</span>
@@ -244,14 +175,10 @@ export default function HeroSection() {
                 </motion.button>
               </Link>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-                className="group px-8 py-5 bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 rounded-full backdrop-blur-md transition-all duration-300 flex items-center justify-center gap-2"
-              >
+              <button className="group px-8 py-5 bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 rounded-full backdrop-blur-md transition-all duration-300 flex items-center justify-center gap-2">
                 <Grid3x3 className="w-5 h-5" />
                 <span className="text-lg">Browse Categories</span>
-              </motion.button>
+              </button>
             </motion.div>
 
             <motion.div
@@ -276,14 +203,14 @@ export default function HeroSection() {
                   whileHover={{ scale: 1.05, y: -5 }}
                   className="flex items-center gap-4 p-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 cursor-default shadow-sm"
                 >
-                  <div className="shrink-0 w-12 h-12 flex items-center justify-center bg-blue-400/20 rounded-xl">
-                    <item.icon className="w-6 h-6 text-blue-200" />
+                  <div className="shrink-0 w-12 h-12 flex items-center justify-center bg-neutral-400/20 rounded-xl">
+                    <item.icon className="w-6 h-6 text-neutral-200" />
                   </div>
                   <div>
                     <div className="text-white font-semibold leading-tight">
                       {item.text}
                     </div>
-                    <div className="text-sm text-blue-200/80 leading-tight mt-1">
+                    <div className="text-sm text-neutral-200/80 leading-tight mt-1">
                       {item.subtext}
                     </div>
                   </div>
@@ -293,8 +220,6 @@ export default function HeroSection() {
           </div>
 
           <motion.div variants={containerVariants} className="relative">
-            <div className="absolute inset-0 bg-blue-400/30 blur-3xl rounded-full scale-110" />
-
             <div className="relative grid grid-cols-2 gap-4">
               <ProductGridItem
                 product={products[0]}

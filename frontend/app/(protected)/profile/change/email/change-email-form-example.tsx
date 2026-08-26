@@ -44,12 +44,12 @@
 //         <Alert
 //           className={`border-2 ${
 //             state.success
-//               ? "bg-green-50 border-green-200 text-green-900"
-//               : "bg-red-50 border-red-200 text-red-900"
+//               ? "bg-neutral--50 border-neutral--200 text-neutral--600"
+//               : "bg-red-50 border-red-200 text-red-600"
 //           }`}
 //         >
 //           {state.success ? (
-//             <CheckCircle2 className="h-5 w-5 text-green-600" />
+//             <CheckCircle2 className="h-5 w-5 text-neutral--600" />
 //           ) : (
 //             <AlertCircle className="h-5 w-5 text-red-600" />
 //           )}
@@ -61,7 +61,7 @@
 
 //       <Alert className="bg-amber-50 border-amber-200">
 //         <Info className="h-5 w-5 text-amber-600" />
-//         <AlertDescription className="text-amber-900 text-sm">
+//         <AlertDescription className="text-amber-600 text-sm">
 //           <strong className="font-semibold">Important:</strong> We&apos;ll send
 //           a verification link to your new email. The change won&apos;t take
 //           effect until you verify it.
@@ -73,7 +73,7 @@
 //         {/* New Email */}
 //         <Field className="gap-2">
 //           <FieldLabel
-//             className="text-sm font-semibold text-gray-900"
+//             className="text-sm font-semibold text-gray-600"
 //             htmlFor="newEmail"
 //           >
 //             New Email Address
@@ -88,7 +88,7 @@
 //               type="email"
 //               disabled={pending}
 //               placeholder="Enter your new email address"
-//               className="pl-11 h-12 bg-gray-50 border-gray-200 focus:bg-white focus:border-blue-600 transition-all"
+//               className="pl-11 h-12 bg-gray-50 border-gray-200 focus:bg-white focus:border-neutral-600 transition-all"
 //             />
 //           </div>
 //           {state.errors.newEmail && (
@@ -102,7 +102,7 @@
 //         {/* Password Confirmation */}
 //         <Field className="gap-2">
 //           <FieldLabel
-//             className="text-sm font-semibold text-gray-900"
+//             className="text-sm font-semibold text-gray-600"
 //             htmlFor="password"
 //           >
 //             Confirm with Password
@@ -117,7 +117,7 @@
 //               type="password"
 //               disabled={pending}
 //               placeholder="Enter your password to confirm"
-//               className="pl-11 h-12 bg-gray-50 border-gray-200 focus:bg-white focus:border-blue-600 transition-all"
+//               className="pl-11 h-12 bg-gray-50 border-gray-200 focus:bg-white focus:border-neutral-600 transition-all"
 //             />
 //           </div>
 //           {state.errors.password && (
@@ -133,7 +133,7 @@
 //           <button
 //             type="submit"
 //             disabled={pending}
-//             className="w-full bg-linear-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 hover:-translate-y-0.5 group"
+//             className="w-full bg-linear-to-r from-neutral-600 to-neutral-500 hover:from-neutral-700 hover:to-neutral-600 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-neutral-600/30 hover:shadow-xl hover:shadow-neutral-600/40 hover:-translate-y-0.5 group"
 //           >
 //             {pending ? (
 //               <>
@@ -152,7 +152,7 @@
 
 //       {/* Verification Steps */}
 //       <div className="pt-4 border-t border-gray-200 space-y-4">
-//         <h4 className="font-semibold text-gray-900 text-sm">
+//         <h4 className="font-semibold text-gray-600 text-sm">
 //           What happens next?
 //         </h4>
 //         <ol className="space-y-2.5">
@@ -166,7 +166,7 @@
 //               key={index}
 //               className="flex items-start gap-3 text-sm text-gray-600"
 //             >
-//               <div className="shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs font-semibold mt-0.5">
+//               <div className="shrink-0 w-6 h-6 rounded-full bg-neutral-100 text-neutral-600 flex items-center justify-center text-xs font-semibold mt-0.5">
 //                 {index + 1}
 //               </div>
 //               <span className="flex-1 pt-0.5">{step}</span>

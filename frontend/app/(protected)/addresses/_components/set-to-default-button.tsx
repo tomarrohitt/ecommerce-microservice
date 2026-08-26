@@ -18,7 +18,7 @@ export const SetToDefaultButton = ({ addressId }: { addressId: string }) => {
     <button
       onClick={handleSetToDefault}
       disabled={pending}
-      className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-blue-500 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+      className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-neutral-500 bg-neutral-50 rounded-lg hover:bg-neutral-100 transition-colors"
     >
       {pending ? (
         <Spinner className="w-4 h-4 animate-spin" />

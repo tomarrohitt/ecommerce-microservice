@@ -81,14 +81,14 @@ export default function AddToCartButton({
     }
 
     if (pending) {
-      return "bg-blue-400 text-white cursor-wait border-2 border-blue-500 opacity-80";
+      return "bg-neutral-400 text-white cursor-wait border-2 border-neutral-500 opacity-80";
     }
 
     if (added) {
-      return "bg-emerald-500 text-white border-2 border-emerald-600";
+      return "bg-neutral-500 text-white border-2 border-neutral-600";
     }
 
-    return "bg-gradient-to-r from-blue-500 to-blue-500 text-white hover:from-blue-600 hover:to-blue-600 border-2 border-blue-600 hover:border-blue-600";
+    return "bg-gradient-to-r from-neutral-500 to-neutral-500 text-white hover:from-neutral-600 hover:to-neutral-600 border-2 border-neutral-600 hover:border-neutral-600";
   };
 
   return (

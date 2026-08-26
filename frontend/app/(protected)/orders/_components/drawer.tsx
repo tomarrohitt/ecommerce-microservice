@@ -27,8 +27,8 @@ export function ReviewDrawer({ product }: ReviewDrawerProps) {
   return (
     <Drawer open={isOpen} onOpenChange={setIsOpen} direction="right">
       <DrawerTrigger asChild>
-        <Button className="rounded-full bg-blue-500 hover:bg-blue-700 text-white shadow-lg shadow-blue-900/20 transition-all hover:scale-105 active:scale-95 gap-2 px-6 absolute right-24">
-          <Sparkles className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+        <Button className="rounded-full bg-neutral-500 hover:bg-neutral-700 text-white shadow-lg shadow-neutral-600/20 transition-all hover:scale-105 active:scale-95 gap-2 px-6 absolute right-24">
+          <Sparkles className="w-4 h-4 fill-neutral-400 text-neutral-400" />
           Write a Review
         </Button>
       </DrawerTrigger>

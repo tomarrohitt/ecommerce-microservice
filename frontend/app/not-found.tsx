@@ -3,10 +3,10 @@ import NotFoundLottie from "@/public/lottie/not-found.json";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 to-blue-100 flex items-center justify-center p-5 relative overflow-hidden">
-      <div className="absolute w-75 h-75 bg-blue-600 rounded-full opacity-10 -top-24 -left-24 animate-pulse" />
-      <div className="absolute w-50 h-50 bg-blue-500 rounded-full opacity-10 -bottom-12 -right-12 animate-pulse delay-1000" />
-      <div className="absolute w-37.5 h-37.5 bg-blue-400 rounded-full opacity-10 top-1/2 right-[10%] animate-pulse delay-2000" />
+    <div className="min-h-screen bg-linear-to-br from-neutral-50 to-neutral-100 flex items-center justify-center p-5 relative overflow-hidden">
+      <div className="absolute w-75 h-75 bg-neutral-600 rounded-full opacity-10 -top-24 -left-24 animate-pulse" />
+      <div className="absolute w-50 h-50 bg-neutral-500 rounded-full opacity-10 -bottom-12 -right-12 animate-pulse delay-1000" />
+      <div className="absolute w-37.5 h-37.5 bg-neutral-400 rounded-full opacity-10 top-1/2 right-[10%] animate-pulse delay-2000" />
 
       <div className="max-w-3xl w-full text-center relative z-10">
         <div className="relative flex items-center justify-center">

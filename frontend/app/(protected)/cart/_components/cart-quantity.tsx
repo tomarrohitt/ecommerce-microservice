@@ -34,7 +34,7 @@ export const CartQuantity = ({ item }: { item: CartItemWithProduct }) => {
         className="w-8 h-8 rounded-md border border-gray-200 bg-white flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed group z-10"
         onClick={() => handleQuantityChange(-1)}
       >
-        <Minus className="w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-colors" />
+        <Minus className="w-4 h-4 text-gray-500 group-hover:text-neutral-600 transition-colors" />
       </motion.button>
       <div className="w-12 h-8 relative flex items-center justify-center overflow-hidden">
         <AnimatePresence mode="popLayout" initial={false} custom={direction}>
@@ -46,7 +46,7 @@ export const CartQuantity = ({ item }: { item: CartItemWithProduct }) => {
               exit={{ opacity: 0, scale: 0.5 }}
               className="absolute inset-0 flex items-center justify-center"
             >
-              <Loader2 className="w-4 h-4 animate-spin text-blue-500" />
+              <Loader2 className="w-4 h-4 animate-spin text-neutral-500" />
             </motion.div>
           ) : (
             <motion.span
@@ -56,7 +56,7 @@ export const CartQuantity = ({ item }: { item: CartItemWithProduct }) => {
               initial="enter"
               animate="center"
               exit="exit"
-              className="absolute font-bold text-gray-900 tabular-nums"
+              className="absolute font-bold text-gray-600 tabular-nums"
             >
               {item.quantity}
             </motion.span>
@@ -72,7 +72,7 @@ export const CartQuantity = ({ item }: { item: CartItemWithProduct }) => {
         className="w-8 h-8 rounded-md border border-gray-200 bg-white flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed group z-10"
         onClick={() => handleQuantityChange(1)}
       >
-        <Plus className="w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-colors" />
+        <Plus className="w-4 h-4 text-gray-500 group-hover:text-neutral-600 transition-colors" />
       </motion.button>
     </div>
   );

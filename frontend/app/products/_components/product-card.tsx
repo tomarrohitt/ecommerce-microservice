@@ -14,10 +14,10 @@ export default function ProductCard({ product }: ProductCardProps) {
   const isLowStock = product.stockQuantity > 0 && product.stockQuantity <= 10;
 
   return (
-    <div className="group relative bg-white rounded-3xl overflow-hidden border-2 border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-100 h-full flex flex-col">
+    <div className="group relative bg-white rounded-3xl overflow-hidden border-2 border-slate-200 hover:border-neutral-300 transition-all duration-300 hover:shadow-2xl hover:shadow-neutral-100 h-full flex flex-col">
       {/* Product Image */}
       <Link href={`/products/${product.id}`} className="block relative">
-        <div className="relative h-64 bg-linear-to-br from-slate-100 via-blue-50 to-blue-50 overflow-hidden">
+        <div className="relative h-64 bg-linear-to-br from-slate-100 via-neutral-50 to-neutral-50 overflow-hidden">
           {product.thumbnail ? (
             <Image
               src={product.thumbnail}
@@ -37,13 +37,13 @@ export default function ProductCard({ product }: ProductCardProps) {
 
           {/* Stock Badge */}
           {isOutOfStock && (
-            <Badge className="absolute top-4 right-4 bg-blue-500 hover:bg-blue-600 text-white border-0 shadow-lg text-xs font-bold px-3 py-1.5 rounded-full">
+            <Badge className="absolute top-4 right-4 bg-neutral-500 hover:bg-neutral-600 text-white border-0 shadow-lg text-xs font-bold px-3 py-1.5 rounded-full">
               Out of Stock
             </Badge>
           )}
 
           {isLowStock && !isOutOfStock && (
-            <Badge className="absolute top-4 right-4 bg-blue-500 hover:bg-blue-600 text-white border-0 shadow-lg text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1">
+            <Badge className="absolute top-4 right-4 bg-neutral-500 hover:bg-neutral-600 text-white border-0 shadow-lg text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1">
               <TrendingUp className="h-3 w-3" />
               Low Stock
             </Badge>
@@ -61,7 +61,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       {/* Product Info */}
       <div className="p-5 flex flex-col grow">
         <Link href={`/products/${product.id}`}>
-          <h3 className="text-lg font-bold text-slate-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors leading-snug">
+          <h3 className="text-lg font-bold text-slate-600 mb-3 line-clamp-2 group-hover:text-neutral-600 transition-colors leading-snug">
             {product.name}
           </h3>
         </Link>
@@ -69,7 +69,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         {/* Price and Stock */}
         <div className="flex items-end justify-between mb-4 mt-auto">
           <div>
-            <div className="text-3xl font-black bg-linear-to-r from-blue-500 to-blue-500 bg-clip-text text-transparent">
+            <div className="text-3xl font-black bg-linear-to-r from-neutral-500 to-neutral-500 bg-clip-text text-transparent">
               ${product.price}
             </div>
           </div>
@@ -78,10 +78,10 @@ export default function ProductCard({ product }: ProductCardProps) {
             <div
               className={`text-sm font-bold ${
                 isOutOfStock
-                  ? "text-blue-500"
+                  ? "text-neutral-500"
                   : isLowStock
-                    ? "text-blue-600"
-                    : "text-emerald-600"
+                    ? "text-neutral-600"
+                    : "text-neutral-600"
               }`}
             >
               {isOutOfStock ? (
@@ -110,7 +110,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       </div>
 
       {/* Decorative corner accent */}
-      <div className="absolute top-0 right-0 w-20 h-20 bg-linear-to-br from-blue-400/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div className="absolute top-0 right-0 w-20 h-20 bg-linear-to-br from-neutral-400/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
     </div>
   );
 }

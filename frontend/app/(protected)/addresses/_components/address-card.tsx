@@ -12,12 +12,12 @@ export const AddressCard = ({ address, i }: { address: any; i: number }) => {
       className={cn(
         `relative bg-white rounded-xl border flex flex-col transition-shadow`,
         address.isDefault
-          ? "border-blue-500 shadow-sm"
+          ? "border-neutral-500 shadow-sm"
           : "border-slate-200 hover:shadow-md",
       )}
     >
       {address.isDefault && (
-        <div className="absolute -top-2 -right-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+        <div className="absolute -top-2 -right-2 w-8 h-8 bg-neutral-500 rounded-full flex items-center justify-center">
           <CheckCircle className="w-5 h-5 text-white" />
         </div>
       )}
@@ -28,24 +28,24 @@ export const AddressCard = ({ address, i }: { address: any; i: number }) => {
             <div
               className={cn(
                 "p-2 rounded-lg shrink-0",
-                address.isDefault ? "bg-blue-100" : "bg-slate-100",
+                address.isDefault ? "bg-neutral-100" : "bg-slate-100",
               )}
             >
               <Home
                 className={cn(
                   "w-5 h-5",
-                  address.isDefault ? "text-blue-600" : "text-slate-500",
+                  address.isDefault ? "text-neutral-600" : "text-slate-500",
                 )}
               />
             </div>
 
             <div className="min-w-0">
-              <h3 className="text-lg font-semibold text-slate-900 truncate">
+              <h3 className="text-lg font-semibold text-slate-600 truncate">
                 {address.name}
               </h3>
 
               {address.isDefault && (
-                <span className="inline-flex items-center gap-1 text-xs font-medium text-blue-700 bg-blue-50 px-2 py-1 rounded-full mt-1">
+                <span className="inline-flex items-center gap-1 text-xs font-medium text-neutral-700 bg-neutral-50 px-2 py-1 rounded-full mt-1">
                   <CheckCircle className="w-3 h-3" />
                   Default
                 </span>

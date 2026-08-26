@@ -36,7 +36,7 @@ export function Modal({
             Edit
           </button>
         ) : (
-          <button className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 font-medium delay-300 z-2">
+          <button className="inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-500 text-white rounded-lg hover:bg-neutral-700 transition-colors shadow-lg shadow-neutral-500/30 font-medium z-2">
             <Plus className="w-5 h-5" />
             Add New Address
           </button>

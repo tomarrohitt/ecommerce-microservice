@@ -59,12 +59,12 @@ export const ChangePasswordForm = () => {
         <Alert
           className={`border-2 ${
             state.success
-              ? "bg-green-50 border-green-200 text-green-900"
-              : "bg-red-50 border-red-200 text-red-900"
+              ? "bg-neutral--50 border-neutral--200 text-neutral--600"
+              : "bg-red-50 border-red-200 text-red-600"
           }`}
         >
           {state.success ? (
-            <CheckCircle2 className="h-5 w-5 text-green-600" />
+            <CheckCircle2 className="h-5 w-5 text-neutral--600" />
           ) : (
             <AlertCircle className="h-5 w-5 text-red-600" />
           )}
@@ -74,9 +74,9 @@ export const ChangePasswordForm = () => {
         </Alert>
       )}
 
-      <Alert className="bg-blue-50 border-blue-200">
-        <Shield className="h-5 w-5 text-blue-600" />
-        <AlertDescription className="text-blue-900 text-sm">
+      <Alert className="bg-neutral-50 border-neutral-200">
+        <Shield className="h-5 w-5 text-neutral-600" />
+        <AlertDescription className="text-neutral-600 text-sm">
           <strong className="font-semibold">Security reminder:</strong> After
           changing your password, you&apos;ll be logged out from all devices and
           need to sign in again.
@@ -88,24 +88,24 @@ export const ChangePasswordForm = () => {
         <div className="flex items-start gap-3">
           <Info className="h-5 w-5 text-gray-600 mt-0.5 shrink-0" />
           <div className="space-y-3">
-            <h4 className="font-semibold text-gray-900 text-sm">
+            <h4 className="font-semibold text-gray-600 text-sm">
               Password Requirements
             </h4>
             <div className="grid sm:grid-cols-2 gap-2 text-sm">
               <div className="flex items-center gap-2 text-gray-700">
-                <CheckCircle2 className="h-4 w-4 text-green-600 shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-neutral--600 shrink-0" />
                 <span>8+ characters</span>
               </div>
               <div className="flex items-center gap-2 text-gray-700">
-                <CheckCircle2 className="h-4 w-4 text-green-600 shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-neutral--600 shrink-0" />
                 <span>One uppercase</span>
               </div>
               <div className="flex items-center gap-2 text-gray-700">
-                <CheckCircle2 className="h-4 w-4 text-green-600 shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-neutral--600 shrink-0" />
                 <span>One lowercase</span>
               </div>
               <div className="flex items-center gap-2 text-gray-700">
-                <CheckCircle2 className="h-4 w-4 text-green-600 shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-neutral--600 shrink-0" />
                 <span>One number</span>
               </div>
             </div>
@@ -116,7 +116,7 @@ export const ChangePasswordForm = () => {
       <form ref={formRef} action={action} className="space-y-6">
         <Field className="gap-2">
           <FieldLabel
-            className="text-sm font-semibold text-gray-900"
+            className="text-sm font-semibold text-gray-600"
             htmlFor="currentPassword"
           >
             Current Password
@@ -134,7 +134,7 @@ export const ChangePasswordForm = () => {
               }
               type="password"
               placeholder="Enter your current password"
-              className="pl-11 pr-11 h-12 bg-gray-50 border-gray-200 focus:bg-white focus:border-blue-600 transition-all"
+              className="pl-11 pr-11 h-12 bg-gray-50 border-gray-200 focus:bg-white focus:border-neutral-600 transition-all"
             />
           </div>
           {state?.errors.currentPassword && (
@@ -158,7 +158,7 @@ export const ChangePasswordForm = () => {
 
         <Field className="gap-2">
           <FieldLabel
-            className="text-sm font-semibold text-gray-900"
+            className="text-sm font-semibold text-gray-600"
             htmlFor="newPassword"
           >
             New Password
@@ -174,7 +174,7 @@ export const ChangePasswordForm = () => {
               disabled={pending}
               defaultValue={!state?.success ? state?.inputs.newPassword : ""}
               placeholder="Create a strong new password"
-              className="pl-11 pr-11 h-12 bg-gray-50 border-gray-200 focus:bg-white focus:border-blue-600 transition-all"
+              className="pl-11 pr-11 h-12 bg-gray-50 border-gray-200 focus:bg-white focus:border-neutral-600 transition-all"
             />
           </div>
           {state?.errors.newPassword && (
@@ -189,7 +189,7 @@ export const ChangePasswordForm = () => {
           <button
             type="submit"
             disabled={pending}
-            className="w-full bg-linear-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 hover:-translate-y-0.5 group"
+            className="w-full bg-linear-to-r from-neutral-600 to-neutral-500 hover:from-neutral-700 hover:to-neutral-600 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-neutral-600/30 hover:shadow-xl hover:shadow-neutral-600/40 hover:-translate-y-0.5 group"
           >
             {pending ? (
               <>
@@ -212,7 +212,7 @@ export const ChangePasswordForm = () => {
           Having trouble? Contact our{" "}
           <a
             href="/support"
-            className="text-blue-600 hover:text-blue-700 font-medium underline"
+            className="text-neutral-600 hover:text-neutral-700 font-medium underline"
           >
             support team
           </a>{" "}

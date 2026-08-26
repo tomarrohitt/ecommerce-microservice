@@ -32,7 +32,7 @@ export const ProductGridItem = ({
         {showCategory && (
           <div className="absolute bottom-0 left-0 right-0 p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
             <div className="bg-white/90 backdrop-blur-sm rounded-xl px-3 py-1.5 inline-block">
-              <span className="text-xs text-blue-600 font-medium">
+              <span className="text-xs text-neutral-600 font-medium">
                 {product.category}
               </span>
             </div>

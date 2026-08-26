@@ -34,7 +34,7 @@ export default async function ProductDetailPage({
     product.attributes && Object.keys(product.attributes).length > 0;
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-linear-to-br from-neutral-50 via-white to-neutral-50">
       <BackButtons
         name={product.name}
         category={{
@@ -46,7 +46,7 @@ export default async function ProductDetailPage({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Link
           href="/products"
-          className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors mb-6 group"
+          className="inline-flex items-center gap-2 text-gray-600 hover:text-neutral-600 transition-colors mb-6 group"
         >
           <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           Back to Products
@@ -98,7 +98,7 @@ export default async function ProductDetailPage({
         <Card>
           <CardContent className="p-6 sm:p-8">
             <div className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl font-bold text-gray-600 mb-4">
                 Description
               </h2>
               <p className="text-gray-600 leading-relaxed">
@@ -121,7 +121,7 @@ export default async function ProductDetailPage({
 
             <div>
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold text-gray-900">
+                <h2 className="text-2xl font-bold text-gray-600">
                   Customer Reviews ({product.rating})
                 </h2>
                 <ProductRating

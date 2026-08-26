@@ -30,48 +30,34 @@ export default async function OrderDetailsPage({
       case "PAID":
       case "COMPLETED":
       case "DELIVERED":
-        return "bg-green-100 text-green-700 border-green-200";
+        return "bg-neutral--100 text-neutral--700 border-neutral--200";
       case "AWAITING_PAYMENT":
       case "PENDING":
       case "CONFIRMED":
       case "SHIPPED":
-        return "bg-gray-100 text-gray-500 border-gray-200";
+        return "bg-neutral-100 text-neutral-500 border-neutral-200";
       case "CANCELLED":
         return "bg-red-100 text-red-700 border-red-200";
       default:
-        return "bg-gray-100 text-gray-700 border-gray-200";
+        return "bg-neutral-100 text-neutral-700 border-neutral-200";
     }
   };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div
-        className={`mb-8`}
-        style={{
-          animationDelay: "100ms",
-        }}
-      >
+      <div className={`mb-8`}>
         <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-3">
-            <h1 className="text-3xl font-bold text-gray-900">
-              Order #{order.id.toUpperCase()}
-            </h1>
-            <span
-              className={`px-3 py-1 rounded-full text-xs font-bold border ${getStatusColor(order.status)}`}
-            >
-              {order.status === "CREATED"
-                ? "AWAITING PAYMENT"
-                : order.status.replace("_", " ")}
-            </span>
-          </div>
+          <h1 className="text-2xl font-bold text-neutral-600">
+            Order #{order.id.toUpperCase()}
+          </h1>
           <Link
             href="/orders"
-            className="text-sm font-medium text-blue-500 hover:text-blue-700 hover:underline"
+            className="text-sm font-medium text-neutral-500 hover:text-neutral-700 hover:underline"
           >
             &larr; Back to Orders
           </Link>
         </div>
-        <p className="text-gray-500">
+        <p className="text-neutral-500">
           Placed on{" "}
           {new Date(order.createdAt).toLocaleDateString("en-US", {
             year: "numeric",
@@ -85,61 +71,55 @@ export default async function OrderDetailsPage({
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
           <Card className="shadow-md pt-0">
-            <CardHeader
-              className={`bg-gray-50 border-b pt-6`}
-              style={{
-                animationDelay: "150ms",
-              }}
-            >
-              <h2 className="text-lg font-bold text-gray-900">Order Items</h2>
+            <CardHeader className="bg-neutral-50 border-b pt-6">
+              <h2 className="text-lg font-bold text-neutral-600">
+                Order Items
+              </h2>
             </CardHeader>
             <CardContent className="p-0">
-              <div className="divide-y">
-                {order.items.map((item, index) => (
-                  <div
-                    key={item.productId}
-                    className={`p-6 flex gap-4`}
-                    style={{ animationDelay: `${100 + index * 40}ms` }}
+              {order.items.map((item) => (
+                <div
+                  key={item.productId}
+                  className="py-2 px-6 flex gap-4 hover:shadow-xs"
+                >
+                  <Link
+                    href={`/products/${item.productId}`}
+                    className="relative size-20 bg-neutral-100 rounded-xs overflow-hidden shrink-0 "
                   >
-                    <Link
-                      href={`/products/${item.productId}`}
-                      className="relative w-20 h-20 bg-gray-100 rounded-lg overflow-hidden shrink-0 border border-gray-200"
-                    >
-                      {item.thumbnail ? (
-                        <Image
-                          src={item.thumbnail}
-                          loading="eager"
-                          alt={item.name}
-                          sizes="80px"
-                          fill
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center text-2xl">
-                          📦
-                        </div>
-                      )}
-                    </Link>
-                    <div className="flex-1 flex justify-between">
-                      <div>
-                        <Link
-                          href={`/products/${item.productId}`}
-                          className="font-semibold text-gray-900 hover:text-blue-500"
-                        >
-                          {item.name}
-                        </Link>
-                        <p className="text-sm text-gray-500 mt-1">
-                          Qty: {item.quantity}
-                        </p>
+                    {item.thumbnail ? (
+                      <Image
+                        src={item.thumbnail}
+                        loading="eager"
+                        alt={item.name}
+                        sizes="80px"
+                        fill
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-2xl">
+                        📦
                       </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">
-                          ${(Number(item.price) * item.quantity).toFixed(2)}
-                        </p>
-                      </div>
+                    )}
+                  </Link>
+                  <div className="flex-1 flex justify-between">
+                    <div>
+                      <Link
+                        href={`/products/${item.productId}`}
+                        className="font-semibold text-neutral-600 hover:text-neutral-500"
+                      >
+                        {item.name}
+                      </Link>
+                      <p className="text-sm text-neutral-500 mt-1">
+                        Qty: {item.quantity}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-neutral-600">
+                        ${(Number(item.price) * item.quantity).toFixed(2)}
+                      </p>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </CardContent>
           </Card>
 
@@ -155,77 +135,46 @@ export default async function OrderDetailsPage({
 
         <div className="lg:col-span-1">
           <Card className="shadow-md sticky top-6 pt-0">
-            <CardHeader
-              className={`bg-gray-50 border-b pt-6`}
-              style={{
-                animationDelay: "100ms",
-              }}
-            >
-              <h2 className="text-lg font-bold text-gray-900">Order Summary</h2>
+            <CardHeader className={`bg-neutral-50 border-b pt-6`}>
+              <h2 className="text-lg font-bold text-neutral-600">
+                Order Summary
+              </h2>
             </CardHeader>
             <CardContent>
               <div className="space-y-3 text-sm">
-                <div
-                  className={`flex justify-between text-gray-500`}
-                  style={{
-                    animationDelay: "130ms",
-                  }}
-                >
+                <div className={`flex justify-between text-neutral-500`}>
                   <span>Subtotal</span>
                   <span>${Number(order.subtotal).toFixed(2)}</span>
                 </div>
-                <div
-                  className={`flex justify-between text-gray-500`}
-                  style={{
-                    animationDelay: "160ms",
-                  }}
-                >
+                <div className={`flex justify-between text-neutral-500`}>
                   <span>Tax</span>
                   <span>${Number(order.tax).toFixed(2)}</span>
                 </div>
-                <div
-                  className={`flex justify-between text-gray-500`}
-                  style={{
-                    animationDelay: "190ms",
-                  }}
-                >
+                <div className={`flex justify-between text-neutral-500`}>
                   <span>Shipping</span>
-                  <span className="text-green-500 font-medium">Free</span>
+                  <span className="text-neutral--500 font-medium">Free</span>
                 </div>
                 <div
                   className={`pt-3 border-t flex justify-between items-center`}
-                  style={{
-                    animationDelay: "220ms",
-                  }}
                 >
-                  <span className="text-base font-bold text-gray-900">
+                  <span className="text-base font-bold text-neutral-600">
                     Total
                   </span>
-                  <span className="text-xl font-bold text-blue-500">
+                  <span className="text-xl font-bold text-neutral-600">
                     ${Number(order.totalAmount).toFixed(2)}
                   </span>
                 </div>
               </div>
 
               <div className="mt-6 pt-6 border-t">
-                <h3
-                  className={`text-sm font-semibold text-gray-900 mb-3`}
-                  style={{
-                    animationDelay: "250ms",
-                  }}
-                >
+                <h3 className={`text-sm font-semibold text-neutral-600 mb-3`}>
                   Payment Status
                 </h3>
                 <PaymentStatus order={order} />
               </div>
 
               {order.invoiceUrl && (
-                <div
-                  className={`mt-6 block w-full text-center`}
-                  style={{
-                    animationDelay: "280ms",
-                  }}
-                >
+                <div className={`mt-6 block w-full text-center`}>
                   <InvoiceDownloadButton
                     orderId={order.id}
                     className="w-full"
@@ -233,15 +182,13 @@ export default async function OrderDetailsPage({
                 </div>
               )}
 
-              <div
-                className={`mt-6 text-center`}
-                style={{
-                  animationDelay: "300ms",
-                }}
-              >
-                <p className="text-xs text-gray-400">
+              <div className={`mt-6 text-center`}>
+                <p className="text-xs text-neutral-400">
                   Need help with this order?{" "}
-                  <a href="/support" className="text-blue-500 hover:underline">
+                  <a
+                    href="/support"
+                    className="text-neutral-500 hover:underline"
+                  >
                     Contact Support
                   </a>
                 </p>
@@ -271,19 +218,16 @@ function PaymentStatus({ order }: { order: OrderExtended }) {
     case "SUCCESS":
       return (
         <div
-          className={`bg-green-50 border border-green-100 rounded-lg p-4 flex items-center gap-3 `}
-          style={{
-            animationDelay: "270ms",
-          }}
+          className={`bg-neutral--50 border border-neutral--100 rounded-lg p-4 flex items-center gap-3 `}
         >
-          <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-500 shrink-0">
+          <div className="w-8 h-8 rounded-full bg-neutral--100 flex items-center justify-center text-neutral--500 shrink-0">
             <CheckCircle className="w-5 h-5" />
           </div>
           <div>
-            <p className="text-sm font-medium text-green-900">
+            <p className="text-sm font-medium text-neutral--600">
               Payment Successful
             </p>
-            <p className="text-xs text-green-700">
+            <p className="text-xs text-neutral--700">
               via Stripe{" "}
               {order.paymentId ? `• ${order.paymentId.slice(-4)}` : ""}
             </p>
@@ -294,14 +238,13 @@ function PaymentStatus({ order }: { order: OrderExtended }) {
     case "REFUNDED":
       return (
         <div
-          className={`bg-red-50 border border-red-100 rounded-lg p-4 flex items-center gap-3`}
-          style={{ animationDelay: "270ms" }}
+          className={`bg-red-50 border border-red-100 rounded-lg p-4 flex ite-3`}
         >
           <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-500 shrink-0">
             <AlertCircle className="w-5 h-5" />
           </div>
           <div>
-            <p className="text-sm font-medium text-red-900">Order Refunded</p>
+            <p className="text-sm font-medium text-red-600">Order Refunded</p>
             <p className="text-xs text-red-700">
               The payment has been returned to your original method.
             </p>
@@ -312,17 +255,16 @@ function PaymentStatus({ order }: { order: OrderExtended }) {
     case "CANCELLED":
       return (
         <div
-          className={`bg-gray-50 border border-gray-200 rounded-lg p-4 flex items-center gap-3`}
-          style={{
-            animationDelay: "270ms",
-          }}
+          className={`bg-neutral-50 border border-neutral-200 rounded-lg p-4 flex items-center gap-3`}
         >
-          <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 shrink-0">
+          <div className="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center text-neutral-500 shrink-0">
             <Ban className="w-5 h-5" />
           </div>
           <div>
-            <p className="text-sm font-medium text-gray-900">Order Cancelled</p>
-            <p className="text-xs text-gray-500">
+            <p className="text-sm font-medium text-neutral-600">
+              Order Cancelled
+            </p>
+            <p className="text-xs text-neutral-500">
               This order was cancelled and no payment was collected.
             </p>
           </div>
@@ -333,9 +275,6 @@ function PaymentStatus({ order }: { order: OrderExtended }) {
       return (
         <div
           className={`bg-orange-50 border border-orange-100 rounded-lg p-4 `}
-          style={{
-            animationDelay: "270ms",
-          }}
         >
           <div className="flex items-center gap-2 mb-3">
             <Clock className="w-4 h-4 text-orange-500" />
@@ -344,7 +283,7 @@ function PaymentStatus({ order }: { order: OrderExtended }) {
             </span>
           </div>
           <Link href={`/checkout/payment?orderId=${order.id}`}>
-            <Button className="w-full bg-blue-500 hover:bg-blue-700 text-white">
+            <Button className="w-full bg-neutral-500 hover:bg-neutral-700 text-white">
               Complete Payment
             </Button>
           </Link>

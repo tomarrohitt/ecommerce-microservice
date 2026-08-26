@@ -16,7 +16,7 @@ export const ProductBreadcrum = ({ category, name }: ProductBreadcrumProps) => {
       )}
 
       <h1
-        className={`text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight delay-75`}
+        className={`text-3xl sm:text-4xl font-bold text-gray-600 tracking-tight delay-75`}
       >
         {name}
       </h1>

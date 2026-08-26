@@ -17,7 +17,7 @@ export const ProductPricing = ({
   return (
     <div className={`space-y-4 delay-150`}>
       <div className="flex items-end gap-3">
-        <span className="text-4xl font-bold text-gray-900">
+        <span className="text-4xl font-bold text-gray-600">
           ${Number(price).toFixed(2)}
         </span>
         <span className="text-lg text-gray-400 line-through mb-1">
@@ -29,7 +29,7 @@ export const ProductPricing = ({
       </div>
 
       {stockQuantity > 0 ? (
-        <div className="flex items-center gap-2 text-green-600 bg-green-50 w-fit px-3 py-1 rounded-full text-sm">
+        <div className="flex items-center gap-2 text-neutral--600 bg-neutral--50 w-fit px-3 py-1 rounded-full text-sm">
           <Check className="w-4 h-4" />
           <span className="font-medium">
             In Stock ({stockQuantity} available)

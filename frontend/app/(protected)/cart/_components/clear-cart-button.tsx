@@ -14,7 +14,7 @@ export const ClearCartButton = () => {
   };
   return (
     <Button
-      className={`group shadow-md transition-all flex items-center text-white bg-red-500 hover:bg-red-600`}
+      className={`group shadow-md transition-all flex items-center text-white bg-neutral-500 hover:bg-neutral-600`}
       disabled={pending}
       onClick={handleClearCart}
     >

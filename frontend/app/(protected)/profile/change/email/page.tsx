@@ -7,11 +7,11 @@ export default function ChangeEmailPage() {
       {/* Page Header */}
       <div className="space-y-3">
         <div className={`flex items-center gap-3 mb-4 delay-100`}>
-          <div className="p-3 bg-linear-to-br from-blue-600 to-blue-500 rounded-2xl shadow-lg shadow-blue-600/30">
+          <div className="p-3 bg-linear-to-br from-neutral-600 to-neutral-500 rounded-2xl shadow-lg shadow-neutral-600/30">
             <Mail className="w-6 h-6 text-white" />
           </div>
           <div className="flex-1">
-            <h2 className="text-2xl font-bold text-gray-900 tracking-tight">
+            <h2 className="text-2xl font-bold text-gray-600 tracking-tight">
               Change Email Address
             </h2>
             <p className="text-sm text-gray-600 mt-0.5">
@@ -21,11 +21,11 @@ export default function ChangeEmailPage() {
         </div>
 
         <div
-          className={`bg-green-50 rounded-lg px-4 py-3 border border-green-200 delay-150`}
+          className={`bg-neutral--50 rounded-lg px-4 py-3 border border-neutral--200 delay-150`}
         >
           <div className="flex items-center gap-2 text-sm">
-            <Verified className="w-4 h-4 text-green-600" />
-            <span className="text-green-900 font-medium">
+            <Verified className="w-4 h-4 text-neutral--600" />
+            <span className="text-neutral--600 font-medium">
               Current email is verified
             </span>
           </div>

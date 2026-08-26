@@ -24,20 +24,20 @@ export function OrderActions({
   ].includes(status);
 
   return (
-    <div
-      className={`flex flex-wrap gap-3 mt-6 `}
-      style={{
-        animationDelay: "160ms",
-      }}
-    >
+    <div className="flex flex-wrap gap-3 mt-6">
       <Link href={`/orders/${orderId}`}>
-        <Button variant="default">View Details</Button>
+        <Button
+          variant="default"
+          className="hover:bg-neutral-600 bg-neutral-600/90"
+        >
+          View Details
+        </Button>
       </Link>
       {canCancel && <OrderCancelButton orderId={orderId} />}
       {invoiceUrl && (
         <InvoiceDownloadButton
           orderId={orderId}
-          className="gap-2 border-slate-200 text-slate-700 hover:bg-slate-50 hover:text-blue-600 hover:border-blue-200 transition-all duration-200 shadow-sm"
+          className="gap-2 border-slate-200 text-slate-700 hover:bg-slate-50 hover:text-neutral-600 hover:border-neutral-200 transition-all duration-200 shadow-sm"
         />
       )}
     </div>

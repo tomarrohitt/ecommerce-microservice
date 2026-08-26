@@ -16,12 +16,12 @@ export const ProductSpecification = ({
 }) => {
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Specifications</h2>
+      <h2 className="text-2xl font-bold text-gray-600 mb-4">Specifications</h2>
       <Card>
         <CardContent className="pt-6">
           <div className="space-y-1">
             <div className="flex justify-between py-3 border-b border-gray-100">
-              <span className="font-semibold text-gray-900">SKU</span>
+              <span className="font-semibold text-gray-600">SKU</span>
               <span className="text-gray-700">{sku}</span>
             </div>
 
@@ -38,7 +38,7 @@ export const ProductSpecification = ({
               );
             })}
             <div className="flex justify-between py-3">
-              <span className="font-semibold text-gray-900">Last Updated</span>
+              <span className="font-semibold text-gray-600">Last Updated</span>
               <span className="text-gray-700">
                 {new Date(updatedAt).toLocaleDateString()}
               </span>

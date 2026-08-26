@@ -16,7 +16,7 @@ export default async function ValidateEmailPage({
       <header className="mb-10 text-center">
         <div className="flex items-center justify-center gap-2 mb-2">
           <ShoppingBagIcon className="size-6 text-gray-400" />
-          <span className="text-lg font-medium text-gray-900">YourStore</span>
+          <span className="text-lg font-medium text-gray-600">YourStore</span>
         </div>
         <p className="text-sm text-gray-500">Email verification</p>
       </header>

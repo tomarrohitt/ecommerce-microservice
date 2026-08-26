@@ -68,7 +68,7 @@ export const CheckoutStripe = ({
             <span className="text-red-600">⚠️</span>
           </div>
           <div>
-            <h3 className="font-semibold text-red-900 mb-1">
+            <h3 className="font-semibold text-red-600 mb-1">
               Configuration Error
             </h3>
             <p className="text-sm text-red-700">
@@ -90,7 +90,7 @@ export const CheckoutStripe = ({
             <span className="text-red-600">⚠️</span>
           </div>
           <div>
-            <h3 className="font-semibold text-red-900 mb-1">
+            <h3 className="font-semibold text-red-600 mb-1">
               Configuration Error
             </h3>
             <p className="text-sm text-red-700">
@@ -112,7 +112,7 @@ export const CheckoutStripe = ({
             <span className="text-red-600">❌</span>
           </div>
           <div>
-            <h3 className="font-semibold text-red-900 mb-1">
+            <h3 className="font-semibold text-red-600 mb-1">
               Initialization Failed
             </h3>
             <p className="text-sm text-red-700">
@@ -133,7 +133,7 @@ export const CheckoutStripe = ({
             <span className="text-red-600">⚠️</span>
           </div>
           <div>
-            <h3 className="font-semibold text-red-900 mb-1">
+            <h3 className="font-semibold text-red-600 mb-1">
               Payment Session Error
             </h3>
             <p className="text-sm text-red-700">

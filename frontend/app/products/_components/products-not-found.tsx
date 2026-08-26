@@ -9,7 +9,7 @@ const ProductsNotFound = ({
       <div className="text-center max-w-lg">
         <IconContainer />
 
-        <h2 className="text-3xl font-bold text-gray-900 mb-3">{title}</h2>
+        <h2 className="text-3xl font-bold text-gray-600 mb-3">{title}</h2>
 
         <p className="text-gray-600 text-lg mb-6 leading-relaxed">
           {description}
@@ -39,4 +39,3 @@ const IconContainer = () => (
 );
 
 export default ProductsNotFound;
-

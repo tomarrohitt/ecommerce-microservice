@@ -35,13 +35,13 @@ export function UserDropdown({ user }: UserDropdownProps) {
             />
           </motion.div>
         ) : (
-          <div className="w-9 h-9 bg-linear-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold shadow-sm">
+          <div className="w-9 h-9 bg-linear-to-br from-neutral-500 to-neutral-600 rounded-full flex items-center justify-center text-white font-bold shadow-sm">
             {user.name?.charAt(0).toUpperCase() || "U"}
           </div>
         )}
 
         <div className="hidden lg:flex flex-col items-start">
-          <span className="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">
+          <span className="text-sm font-semibold text-gray-700 group-hover:text-neutral-600 transition-colors">
             {user.name}
           </span>
         </div>
@@ -50,7 +50,7 @@ export function UserDropdown({ user }: UserDropdownProps) {
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.2 }}
         >
-          <ChevronDown className="w-4 h-4 text-gray-400 group-hover:text-blue-500" />
+          <ChevronDown className="w-4 h-4 text-gray-400 group-hover:text-neutral-500" />
         </motion.div>
       </button>
 
@@ -65,7 +65,7 @@ export function UserDropdown({ user }: UserDropdownProps) {
           >
             <div className="bg-white/80 shadow-xl border border-white/20 overflow-hidden ring-1 ring-black/5 p-1">
               <div className="px-4 py-3 border-b border-gray-100">
-                <p className="text-sm font-medium text-gray-900 truncate">
+                <p className="text-sm font-medium text-gray-600 truncate">
                   {user.name}
                 </p>
                 <p className="text-xs text-gray-500 truncate">{user.email}</p>

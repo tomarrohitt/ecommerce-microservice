@@ -31,7 +31,7 @@ export function FormFooter({
       <Button
         type="submit"
         form={formId}
-        className="flex-1 cursor-pointer"
+        className="flex-1 cursor-pointer bg-neutral-600/90 hover:bg-neutral-600"
         disabled={pending}
       >
         {pending ? <Spinner className="w-4 h-4 animate-spin" /> : submitLabel}

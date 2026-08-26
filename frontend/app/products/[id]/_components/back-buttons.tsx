@@ -14,14 +14,14 @@ export const BackButtons = ({
         <div className="flex items-center gap-2 text-sm">
           <Link
             href="/"
-            className="text-gray-500 hover:text-blue-600 transition-colors"
+            className="text-gray-500 hover:text-neutral-600 transition-colors"
           >
             Home
           </Link>
           <span className="text-gray-400">/</span>
           <Link
             href="/products"
-            className="text-gray-500 hover:text-blue-600 transition-colors"
+            className="text-gray-500 hover:text-neutral-600 transition-colors"
           >
             Products
           </Link>
@@ -30,14 +30,14 @@ export const BackButtons = ({
               <span className="text-gray-400">/</span>
               <Link
                 href={`/products?category=${category.slug}`}
-                className="text-gray-500 hover:text-blue-600 transition-colors"
+                className="text-gray-500 hover:text-neutral-600 transition-colors"
               >
                 {category.name}
               </Link>
             </>
           )}
           <span className="text-gray-400">/</span>
-          <span className="text-gray-900 font-medium truncate">{name}</span>
+          <span className="text-gray-600 font-medium truncate">{name}</span>
         </div>
       </div>
     </div>

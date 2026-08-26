@@ -53,7 +53,7 @@ export const CreateReviewForm = ({
         <div
           className={`p-4 rounded-md text-sm ${
             state.success
-              ? "bg-green-50 text-green-700"
+              ? "bg-neutral--50 text-neutral--700"
               : "bg-red-50 text-red-700"
           }`}
         >
@@ -81,10 +81,10 @@ export const CreateReviewForm = ({
               <Label
                 htmlFor={`rating-${star}`}
                 className="cursor-pointer p-1 transition-transform hover:scale-110 text-muted-foreground/30 fill-transparent
-peer-checked:text-yellow-400 peer-checked:fill-yellow-400 peer-checked:[&~label]:text-yellow-400 peer-checked:[&~label]:fill-yellow-400
+peer-checked:text-neutral-400 peer-checked:fill-neutral-400 peer-checked:[&~label]:text-neutral-400 peer-checked:[&~label]:fill-neutral-400
 
-                  hover:text-yellow-400 hover:fill-yellow-400
-                  hover:[&~label]:text-yellow-400 hover:[&~label]:fill-yellow-400"
+                  hover:text-neutral-400 hover:fill-neutral-400
+                  hover:[&~label]:text-neutral-400 hover:[&~label]:fill-neutral-400"
               >
                 <Star className="w-8 h-8 pointer-events-none fill-inherit" />
               </Label>

@@ -29,7 +29,7 @@ export function AttributeRenderer({
           <div className="flex items-center gap-2">
             {value ? (
               <>
-                <div className="bg-green-100 text-green-700 p-1 rounded-full">
+                <div className="bg-neutral--100 text-neutral--700 p-1 rounded-full">
                   <Check className="w-4 h-4" />
                 </div>
                 <span className="text-gray-700 font-medium">Yes</span>
@@ -60,7 +60,7 @@ export function AttributeRenderer({
 
       case "number":
         return (
-          <span className="text-gray-900 font-semibold">
+          <span className="text-gray-600 font-semibold">
             {value}
             {attribute.unit && (
               <span className="text-gray-500 text-sm ml-1 font-normal">
@@ -92,7 +92,7 @@ export function AttributeRenderer({
             href={String(value)}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-blue-600 hover:text-blue-700 hover:underline transition-colors font-medium"
+            className="flex items-center gap-1 text-neutral-600 hover:text-neutral-700 hover:underline transition-colors font-medium"
           >
             <span>View Link</span>
             <ExternalLink className="w-4 h-4" />
@@ -108,7 +108,7 @@ export function AttributeRenderer({
 
   return (
     <div className="flex justify-between py-3 border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors px-2 -mx-2 rounded-lg">
-      <span className="font-semibold text-gray-900">{attribute.label}</span>
+      <span className="font-semibold text-gray-600">{attribute.label}</span>
       <div className="text-right">{renderValue()}</div>
     </div>
   );

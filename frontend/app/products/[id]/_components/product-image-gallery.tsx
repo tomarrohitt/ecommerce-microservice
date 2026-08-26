@@ -75,8 +75,8 @@ export function ProductImageGallery({
               onClick={() => setSelectedImage(index)}
               className={`aspect-square rounded-lg overflow-hidden border-2 transition-all bg-white ${
                 selectedImage === index
-                  ? "border-blue-600 shadow-md ring-2 ring-blue-100 scale-105"
-                  : "border-gray-200 hover:border-blue-300 hover:scale-105"
+                  ? "border-neutral-600 shadow-md ring-2 ring-neutral-100 scale-105"
+                  : "border-gray-200 hover:border-neutral-300 hover:scale-105"
               }`}
             >
               <Image

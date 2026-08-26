@@ -37,7 +37,7 @@ export default async function OrderSuccessPage({
 
   if (!orderId) {
     return (
-      <div className="min-h-screen bg-linear-to-br from-green-50 via-white to-blue-50 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-linear-to-br from-neutral--50 via-white to-neutral-50 flex items-center justify-center p-4">
         <Card className="w-full max-w-md text-center shadow-lg border-red-100">
           <CardHeader>
             <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -60,7 +60,7 @@ export default async function OrderSuccessPage({
 
   if (!order) {
     return (
-      <div className="min-h-screen bg-linear-to-br from-green-50 via-white to-blue-50 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-linear-to-br from-neutral--50 via-white to-neutral-50 flex items-center justify-center p-4">
         <Card className="w-full max-w-md text-center shadow-lg border-red-100">
           <CardHeader>
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -89,14 +89,14 @@ export default async function OrderSuccessPage({
   });
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-green-50 via-white to-blue-50 py-12 px-4">
+    <div className="min-h-screen bg-linear-to-br from-neutral--50 via-white to-neutral-50 py-12 px-4">
       <div className="max-w-6xl mx-auto space-y-8">
         {/* Hero Section */}
         <div className="text-center space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <div className="inline-flex items-center justify-center w-24 h-24 bg-linear-to-br from-green-400 to-emerald-600 rounded-full shadow-xl shadow-green-200">
+          <div className="inline-flex items-center justify-center w-24 h-24 bg-linear-to-br from-neutral--400 to-neutral-600 rounded-full shadow-xl shadow-neutral--200">
             <CheckCircle className="w-12 h-12 text-white" strokeWidth={3} />
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-600 tracking-tight">
             Order Confirmed!
           </h1>
           <p className="text-lg text-slate-600 max-w-md mx-auto">
@@ -114,7 +114,7 @@ export default async function OrderSuccessPage({
                 <div className="flex items-center justify-between">
                   <div className="space-y-1">
                     <CardTitle className="flex items-center gap-2">
-                      <ShoppingBag className="w-5 h-5 text-blue-600" />
+                      <ShoppingBag className="w-5 h-5 text-neutral-600" />
                       Order Summary
                     </CardTitle>
                     <CardDescription>
@@ -141,14 +141,14 @@ export default async function OrderSuccessPage({
                       </div>
                       <div className="flex-1 min-w-0 flex flex-col justify-between py-1">
                         <div>
-                          <h4 className="font-semibold text-slate-900 truncate">
+                          <h4 className="font-semibold text-slate-600 truncate">
                             {item.name}
                           </h4>
                           <p className="text-sm text-slate-500">
                             Qty: {item.quantity}
                           </p>
                         </div>
-                        <p className="font-medium text-slate-900">
+                        <p className="font-medium text-slate-600">
                           ${item.price}
                         </p>
                       </div>
@@ -162,7 +162,7 @@ export default async function OrderSuccessPage({
                   <span className="text-lg font-medium text-slate-700">
                     Total Amount
                   </span>
-                  <span className="text-2xl font-bold text-slate-900">
+                  <span className="text-2xl font-bold text-slate-600">
                     ${order.totalAmount}{" "}
                     <span className="text-sm font-normal text-slate-500">
                       {order.currency}
@@ -187,7 +187,7 @@ export default async function OrderSuccessPage({
               </Button>
               <Button
                 size="lg"
-                className="flex-1 h-12 bg-blue-600 hover:bg-blue-700"
+                className="flex-1 h-12 bg-neutral-600 hover:bg-neutral-700"
                 asChild
               >
                 <Link href="/products">
@@ -209,7 +209,7 @@ export default async function OrderSuccessPage({
               </CardHeader>
               <CardContent className="pb-4">
                 <div className="flex items-center gap-3">
-                  <Badge className="bg-green-100 text-green-700 hover:bg-green-100 px-3 py-1 text-sm border-0 rounded-full">
+                  <Badge className="bg-neutral--100 text-neutral--700 hover:bg-neutral--100 px-3 py-1 text-sm border-0 rounded-full">
                     <CheckCircle className="w-3.5 h-3.5 mr-1.5" />
                     Payment Confirmed
                   </Badge>
@@ -225,12 +225,12 @@ export default async function OrderSuccessPage({
             <Card className="shadow-sm border-slate-100">
               <CardHeader className="pb-3">
                 <CardTitle className="text-base flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-blue-600" />
+                  <MapPin className="w-4 h-4 text-neutral-600" />
                   Shipping Address
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-sm text-slate-600 leading-relaxed">
-                <p className="font-medium text-slate-900 mb-1">
+                <p className="font-medium text-slate-600 mb-1">
                   Delivery Address
                 </p>
                 {order.shippingAddress.street}
@@ -247,40 +247,40 @@ export default async function OrderSuccessPage({
             </Card>
 
             {/* What's Next (Colored Card) */}
-            <Card className="bg-blue-600 text-white border-0 shadow-lg shadow-blue-200">
+            <Card className="bg-neutral-600 text-white border-0 shadow-lg shadow-neutral-200">
               <CardHeader>
                 <CardTitle className="text-lg">What happens next?</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex gap-3">
-                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center shrink-0 text-xs font-bold border border-blue-400">
+                  <div className="w-6 h-6 bg-neutral-500 rounded-full flex items-center justify-center shrink-0 text-xs font-bold border border-neutral-400">
                     1
                   </div>
                   <div>
                     <p className="font-medium text-sm">Processing</p>
-                    <p className="text-xs text-blue-100 mt-0.5">
+                    <p className="text-xs text-neutral-100 mt-0.5">
                       We are preparing your order.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-3">
-                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center shrink-0 text-xs font-bold border border-blue-400">
+                  <div className="w-6 h-6 bg-neutral-500 rounded-full flex items-center justify-center shrink-0 text-xs font-bold border border-neutral-400">
                     2
                   </div>
                   <div>
                     <p className="font-medium text-sm">Shipped</p>
-                    <p className="text-xs text-blue-100 mt-0.5">
+                    <p className="text-xs text-neutral-100 mt-0.5">
                       Tracking email incoming.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-3">
-                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center shrink-0 text-xs font-bold border border-blue-400">
+                  <div className="w-6 h-6 bg-neutral-500 rounded-full flex items-center justify-center shrink-0 text-xs font-bold border border-neutral-400">
                     3
                   </div>
                   <div>
                     <p className="font-medium text-sm">Delivery</p>
-                    <p className="text-xs text-blue-100 mt-0.5">
+                    <p className="text-xs text-neutral-100 mt-0.5">
                       Est. 3-5 business days.
                     </p>
                   </div>
@@ -290,7 +290,7 @@ export default async function OrderSuccessPage({
 
             {/* Action Buttons (Mobile Only) */}
             <div className="flex flex-col gap-3 lg:hidden">
-              <Button size="lg" className="w-full bg-blue-600" asChild>
+              <Button size="lg" className="w-full bg-neutral-600" asChild>
                 <Link href="/products">Continue Shopping</Link>
               </Button>
               <Button variant="outline" size="lg" className="w-full" asChild>
@@ -301,7 +301,7 @@ export default async function OrderSuccessPage({
             <div className="text-center pt-2">
               <Link
                 href="/support"
-                className="text-sm text-muted-foreground hover:text-blue-600 hover:underline"
+                className="text-sm text-muted-foreground hover:text-neutral-600 hover:underline"
               >
                 Need help? Contact Support
               </Link>

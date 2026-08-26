@@ -27,7 +27,7 @@ export const ForgotPasswordForm = () => {
         <div
           className={`flex items-start gap-3 p-4 rounded-xl text-sm border ${
             state.success
-              ? "bg-emerald-500/15 text-emerald-100 border-emerald-400/30"
+              ? "bg-neutral-500/15 text-neutral-100 border-neutral-400/30"
               : "bg-red-500/15 text-red-100 border-red-400/30"
           }`}
         >
@@ -42,7 +42,7 @@ export const ForgotPasswordForm = () => {
 
       <Field className="gap-0">
         <FieldLabel
-          className="mb-1.5 text-sm font-medium text-blue-100"
+          className="mb-1.5 text-sm font-medium text-neutral-100"
           htmlFor="email"
         >
           Email address
@@ -65,7 +65,7 @@ export const ForgotPasswordForm = () => {
       <button
         type="submit"
         disabled={pending}
-        className="w-full bg-white text-blue-700 font-semibold py-3 px-4 rounded-xl transition-all duration-200 hover:bg-blue-50 active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center shadow-lg shadow-black/10 mt-1"
+        className="w-full bg-white text-neutral-700 font-semibold py-3 px-4 rounded-xl transition-all duration-200 hover:bg-neutral-50 active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center shadow-lg shadow-black/10 mt-1"
       >
         {pending ? (
           <>

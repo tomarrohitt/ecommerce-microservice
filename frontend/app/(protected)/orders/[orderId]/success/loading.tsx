@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Loading() {
   return (
-    <div className="min-h-screen bg-linear-to-br from-green-50 via-white to-blue-50 py-12 px-4">
+    <div className="min-h-screen bg-linear-to-br from-neutral--50 via-white to-neutral-50 py-12 px-4">
       <div className="max-w-6xl mx-auto space-y-8">
         {/* Hero Section Skeleton */}
         <div className="flex flex-col items-center space-y-4">
@@ -89,7 +89,7 @@ export default function Loading() {
             </Card>
 
             {/* What's Next (Colored Card Skeleton) */}
-            <Card className="bg-blue-600/5 border-0 shadow-lg">
+            <Card className="bg-neutral-600/5 border-0 shadow-lg">
               <CardHeader>
                 <Skeleton className="h-6 w-48" />
               </CardHeader>

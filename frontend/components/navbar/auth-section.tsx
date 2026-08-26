@@ -30,12 +30,12 @@ const UnProtectedSection = () => {
     <div className="flex items-center gap-4">
       <Link
         href="/sign-in"
-        className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
+        className="text-sm font-medium text-gray-600 hover:text-neutral-600 transition-colors"
       >
         Sign In
       </Link>
       <Link href="/sign-up">
-        <button className="relative px-5 py-2.5 rounded-full bg-blue-600 text-white text-sm font-semibold shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 hover:bg-blue-500 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:shadow-none">
+        <button className="relative px-5 py-2.5 rounded-full bg-neutral-600 text-white text-sm font-semibold shadow-lg shadow-neutral-500/30 hover:shadow-neutral-500/50 hover:bg-neutral-500 transition-all duration-300 active:shadow-none cursor-pointer">
           Sign Up
         </button>
       </Link>

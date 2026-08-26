@@ -7,7 +7,7 @@ export const NoToken = () => {
       <div className="size-14 rounded-full bg-red-50 flex items-center justify-center mx-auto mb-5">
         <Link2OffIcon className="size-6 text-red-500" />
       </div>
-      <h2 className="text-base font-medium text-gray-900 mb-1.5">
+      <h2 className="text-base font-medium text-gray-600 mb-1.5">
         Invalid or missing link
       </h2>
       <p className="text-sm text-gray-500 mb-5">

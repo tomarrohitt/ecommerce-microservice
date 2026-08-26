@@ -1,9 +1,9 @@
 export default function Loading() {
   return (
     <div className="fade-in-manual max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="bg-linear-to-r from-blue-500 to-indigo-700 rounded-2xl p-8 text-white mb-8">
-        <div className="h-8 bg-blue-400/30 rounded-lg w-80 mb-2 animate-pulse"></div>
-        <div className="h-5 bg-blue-400/30 rounded w-64 animate-pulse"></div>
+      <div className="bg-linear-to-r from-neutral-500 to-neutral-700 rounded-2xl p-8 text-white mb-8">
+        <div className="h-8 bg-neutral-400/30 rounded-lg w-80 mb-2 animate-pulse"></div>
+        <div className="h-5 bg-neutral-400/30 rounded w-64 animate-pulse"></div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">

@@ -77,7 +77,7 @@ export const ProfilePicture = ({ user }: { user: User }) => {
   return (
     <>
       <div className="">
-        <div className="relative w-32 h-32 rounded-full overflow-hidden bg-linear-to-br from-blue-400 to-indigo-500 flex items-center justify-center shadow-xl">
+        <div className="relative w-32 h-32 rounded-full overflow-hidden bg-linear-to-br from-neutral-400 to-neutral-500 flex items-center justify-center shadow-xl">
           {displayUrl ? (
             <Image
               src={displayUrl}
@@ -98,7 +98,7 @@ export const ProfilePicture = ({ user }: { user: User }) => {
         <button
           onClick={() => document.getElementById("profile-pic-input")?.click()}
           disabled={pending}
-          className="absolute bottom-0 right-0 size-10  bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center shadow-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed z-100"
+          className="absolute bottom-0 right-0 size-10  bg-neutral-500 hover:bg-neutral-600 rounded-full flex items-center justify-center shadow-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed z-100"
         >
           {pending ? (
             <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />

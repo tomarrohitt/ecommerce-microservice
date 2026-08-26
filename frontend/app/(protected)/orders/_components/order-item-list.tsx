@@ -2,15 +2,11 @@ import Link from "next/link";
 import { OrderItem } from "@/types";
 import Image from "next/image";
 import { ReviewDrawer } from "./drawer";
-import ProductCard from "@/app/products/_components/product-card";
 
 interface OrderItemsListProps {
   orderItems: OrderItem[];
   status: string;
 }
-
-const entranceAnim =
-  "animate-in fade-in slide-in-from-bottom-4 duration-600 ease-out fill-mode-both";
 
 export function OrderItemsList({ orderItems, status }: OrderItemsListProps) {
   return (
@@ -19,12 +15,11 @@ export function OrderItemsList({ orderItems, status }: OrderItemsListProps) {
         {orderItems.map((item, i) => (
           <div
             key={item.productId}
-            className={`relative flex items-center gap-4 p-3 rounded-lg border border-gray-100 hover:border-gray-200 hover:shadow-sm transition-all `}
-            style={{ animationDelay: `${100 + i * 20}ms` }}
+            className="relative flex items-center gap-4 rounded-lg  transition-all pr-3"
           >
             <Link
               href={`/products/${item.productId}`}
-              className="relative w-16 h-16 bg-linear-to-br from-blue-400 to-indigo-500 rounded-lg flex items-center justify-center shrink-0"
+              className="relative w-16 h-16 bg-linear-to-br from-neutral-400 to-neutral-500 rounded-lg flex items-center justify-center shrink-0"
             >
               {item.thumbnail ? (
                 <Image
@@ -42,7 +37,7 @@ export function OrderItemsList({ orderItems, status }: OrderItemsListProps) {
             <div className="flex-1 min-w-0">
               <Link
                 href={`/products/${item.productId}`}
-                className="font-semibold text-gray-900 hover:text-blue-500 transition-colors line-clamp-1"
+                className="font-semibold text-gray-600 hover:text-neutral-500 transition-colors line-clamp-1"
               >
                 {item.name}
               </Link>
@@ -54,7 +49,7 @@ export function OrderItemsList({ orderItems, status }: OrderItemsListProps) {
             {status === "DELIVERED" && <ReviewDrawer product={item} />}
 
             <div className="text-right shrink-0">
-              <p className="font-semibold text-gray-900">
+              <p className="font-semibold text-neutral-600">
                 ${(item.quantity * Number(item.price)).toFixed(2)}
               </p>
             </div>

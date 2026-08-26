@@ -72,7 +72,7 @@ export default function CheckoutForm({ orderId, amount }: CheckoutFormProps) {
         <div className="flex items-start gap-3 mb-6 p-4 bg-red-50 border border-red-200 rounded-xl">
           <AlertCircle className="w-6 h-6 text-red-500 mt-0.5 shrink-0" />
           <div>
-            <h3 className="font-semibold text-red-900 mb-1">
+            <h3 className="font-semibold text-red-600 mb-1">
               Payment Form Failed to Load
             </h3>
             <p className="text-sm text-red-700 mb-3">{loadError}</p>
@@ -87,24 +87,24 @@ export default function CheckoutForm({ orderId, amount }: CheckoutFormProps) {
         </div>
 
         <div className="mt-6 p-4 bg-gray-50 rounded-xl">
-          <h4 className="font-medium text-gray-900 mb-3">
+          <h4 className="font-medium text-gray-600 mb-3">
             Troubleshooting Steps:
           </h4>
           <ul className="text-sm text-gray-600 space-y-2">
             <li className="flex items-start gap-2">
-              <span className="text-blue-600 mt-0.5">•</span>
+              <span className="text-neutral-600 mt-0.5">•</span>
               <span>Check your internet connection</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-blue-600 mt-0.5">•</span>
+              <span className="text-neutral-600 mt-0.5">•</span>
               <span>Disable any ad blockers or VPN</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-blue-600 mt-0.5">•</span>
+              <span className="text-neutral-600 mt-0.5">•</span>
               <span>Try a different browser or incognito mode</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-blue-600 mt-0.5">•</span>
+              <span className="text-neutral-600 mt-0.5">•</span>
               <span>Contact support if the issue persists</span>
             </li>
           </ul>
@@ -123,14 +123,14 @@ export default function CheckoutForm({ orderId, amount }: CheckoutFormProps) {
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-6 pb-6 border-b border-gray-100">
-        <div className="flex items-center gap-2 text-sm text-green-600 bg-green-50 px-4 py-2 rounded-xl w-fit mb-4">
+        <div className="flex items-center gap-2 text-sm text-neutral--600 bg-neutral--50 px-4 py-2 rounded-xl w-fit mb-4">
           <ShieldCheck className="w-4 h-4" />
           <span className="font-medium">Secure SSL Connection</span>
         </div>
         <div className="flex justify-between items-baseline">
           <span className="text-gray-600 font-medium">Amount to pay</span>
           <div className="text-right">
-            <div className="text-3xl font-bold text-gray-900">${amount}</div>
+            <div className="text-3xl font-bold text-gray-600">${amount}</div>
             <div className="text-sm text-gray-500">USD</div>
           </div>
         </div>
@@ -140,9 +140,9 @@ export default function CheckoutForm({ orderId, amount }: CheckoutFormProps) {
         {!isReady && (
           <div className="flex flex-col items-center justify-center py-16">
             <div className="relative">
-              <div className="animate-spin h-12 w-12 border-4 border-blue-200 border-t-blue-600 rounded-full"></div>
+              <div className="animate-spin h-12 w-12 border-4 border-neutral-200 border-t-neutral-600 rounded-full"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <Lock className="w-5 h-5 text-blue-600" />
+                <Lock className="w-5 h-5 text-neutral-600" />
               </div>
             </div>
             <p className="text-gray-600 text-sm mt-4 font-medium">
@@ -199,7 +199,7 @@ export default function CheckoutForm({ orderId, amount }: CheckoutFormProps) {
         disabled={!isReady || isLoading || !stripe || !elements}
         id="submit"
         type="submit"
-        className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl disabled:shadow-none flex items-center justify-center gap-2 text-lg"
+        className="w-full bg-neutral-600 hover:bg-neutral-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl disabled:shadow-none flex items-center justify-center gap-2 text-lg"
       >
         {isLoading ? (
           <>

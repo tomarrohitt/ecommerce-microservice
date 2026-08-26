@@ -129,7 +129,7 @@ export function ImageCropModal({
           </DialogDescription>
         </DialogHeader>
 
-        <div className="relative h-96 bg-gray-900 rounded-lg">
+        <div className="relative h-96 bg-gray-600 rounded-lg">
           <Cropper
             image={imageSrc}
             crop={crop}

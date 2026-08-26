@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
 import Navbar from "@/components/navbar/navbar";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import Footer from "@/components/footer";
 
-const raleway = Raleway({ subsets: ["latin"], variable: "--font-sans" });
+const raleway = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "E-commerce Store",

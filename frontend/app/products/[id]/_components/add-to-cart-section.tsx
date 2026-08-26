@@ -28,7 +28,7 @@ export function AddToCartSection({
         >
           <Minus className="w-4 h-4" />
         </Button>
-        <div className="w-16 text-center font-semibold text-gray-900">
+        <div className="w-16 text-center font-semibold text-gray-600">
           {quantity}
         </div>
         <Button

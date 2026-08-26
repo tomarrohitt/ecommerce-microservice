@@ -10,8 +10,8 @@ export default async function OrdersPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className={`mb-8 `}>
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">My Orders</h1>
-        <p className="text-gray-500">View and track all your orders</p>
+        <h1 className="text-3xl font-bold text-neutral-600 mb-2">My Orders</h1>
+        <p className="text-neutral-500">View and track all your orders</p>
       </div>
 
       <div
@@ -23,9 +23,7 @@ export default async function OrdersPage() {
         {orders.length === 0 ? (
           <EmptyOrdersState />
         ) : (
-          orders?.map((order, index) => (
-            <OrderCard key={order.id} order={order} index={index} />
-          ))
+          orders?.map((order) => <OrderCard key={order.id} order={order} />)
         )}
       </div>
     </div>
@@ -42,8 +40,10 @@ function EmptyOrdersState() {
     >
       <div className="bg-white rounded-xl shadow-md p-12 text-center">
         <div className="text-6xl mb-4">📦</div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">No Orders Yet</h2>
-        <p className="text-gray-500 mb-6">
+        <h2 className="text-2xl font-bold text-neutral-600 mb-2">
+          No Orders Yet
+        </h2>
+        <p className="text-neutral-500 mb-6">
           Start shopping to see your orders here
         </p>
         <Link href="/products">

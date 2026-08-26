@@ -23,12 +23,12 @@ export const ProductReviews = async ({ id }: { id: string }) => {
             <div className="flex items-start justify-between mb-3">
               <div className="flex items-start gap-3">
                 <Avatar>
-                  <AvatarFallback className="bg-blue-100 text-blue-700 font-semibold">
+                  <AvatarFallback className="bg-neutral-100 text-neutral-700 font-semibold">
                     {review.user?.name?.charAt(0) || "A"}
                   </AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="font-semibold text-gray-900 mb-1">
+                  <p className="font-semibold text-gray-600 mb-1">
                     {review.user?.name || "Anonymous"}
                   </p>
                   <div className="flex items-center gap-2">

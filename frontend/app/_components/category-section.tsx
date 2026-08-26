@@ -1,8 +1,8 @@
 import {
+  Footprints,
   Home,
   Shirt,
   Smartphone,
-  Sparkles,
   Utensils,
   Wrench,
 } from "lucide-react";
@@ -42,8 +42,8 @@ export default function CategoriesSection() {
     },
     {
       id: 6,
-      name: "More",
-      icon: Sparkles,
+      name: "Shoes",
+      icon: Footprints,
       delay: 0.5,
     },
   ];
@@ -76,8 +76,8 @@ export default function CategoriesSection() {
   return (
     <section className="w-full py-20 px-6 lg:px-8 bg-white relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-40">
-        <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-50 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 right-0 w-64 h-64 bg-indigo-50 rounded-full blur-3xl" />
+        <div className="absolute -top-24 -left-24 w-96 h-96 bg-neutral-50 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 right-0 w-64 h-64 bg-neutral-50 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -88,7 +88,7 @@ export default function CategoriesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-600 mb-4 tracking-tight">
             Shop by Category
           </h2>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">
@@ -112,32 +112,21 @@ export default function CategoriesSection() {
                 variants={itemVariants}
                 whileHover={{
                   scale: 1.05,
-                  y: -5,
-                  backgroundColor: "rgba(239, 246, 255, 1)", // blue-50
-                  borderColor: "rgba(59, 130, 246, 0.5)", // blue-500
+                  backgroundColor: "rgba(239, 246, 255, 1)", // neutral-50
+                  borderColor: "rgba(59, 130, 246, 0.5)", // neutral-500
                 }}
                 whileTap={{ scale: 0.95 }}
                 className="relative flex flex-col items-center justify-center p-8 rounded-3xl bg-white border border-gray-100 shadow-sm transition-colors duration-300 group cursor-pointer"
               >
                 <div className="relative mb-4">
-                  <motion.div
-                    className="absolute inset-0 bg-blue-100 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    layoutId={`blob-${category.id}`}
-                  />
-
-                  {/* Icon */}
-                  <div className="relative z-10 p-3 bg-white/50 backdrop-blur-sm rounded-2xl ring-1 ring-gray-100 group-hover:ring-blue-200 transition-all">
-                    <Icon className="w-8 h-8 text-gray-600 group-hover:text-blue-600 transition-colors duration-300" />
+                  <div className="relative z-10 p-3 bg-white/50 backdrop-blur-sm rounded-2xl ring-1 ring-gray-100 group-hover:ring-neutral-200 transition-all">
+                    <Icon className="w-8 h-8 text-gray-600 group-hover:text-neutral-600 transition-colors duration-300" />
                   </div>
                 </div>
 
-                <span className="text-sm font-semibold text-gray-700 group-hover:text-blue-700 transition-colors duration-300">
+                <span className="text-sm font-semibold text-gray-700 group-hover:text-neutral-700 transition-colors duration-300">
                   {category.name}
                 </span>
-
-                <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/40 to-transparent translate-x-full v transition-transform duration-700" />
-                </div>
               </motion.button>
             );
           })}

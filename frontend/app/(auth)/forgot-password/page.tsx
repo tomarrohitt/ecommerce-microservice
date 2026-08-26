@@ -12,7 +12,7 @@ const ForgotPasswordPage = () => {
         <h1 className="text-2xl font-bold text-white tracking-tight">
           Forgot password?
         </h1>
-        <p className="text-blue-200 text-sm mt-1.5 leading-relaxed">
+        <p className="text-neutral-200 text-sm mt-1.5 leading-relaxed">
           No worries — we&apos;ll send reset instructions to your inbox.
         </p>
       </div>
@@ -22,7 +22,7 @@ const ForgotPasswordPage = () => {
       <div className="mt-8 text-center">
         <Link
           href="/sign-in"
-          className="inline-flex items-center text-sm font-medium text-blue-200 hover:text-white transition-colors"
+          className="inline-flex items-center text-sm font-medium text-neutral-200 hover:text-white transition-colors"
         >
           <ArrowLeft className="h-3.5 w-3.5 mr-1.5" />
           Back to sign in

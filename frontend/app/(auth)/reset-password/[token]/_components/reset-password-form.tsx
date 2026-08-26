@@ -35,7 +35,7 @@ export const ResetPasswordForm = ({ token }: { token: string }) => {
 
       <Field className="gap-0">
         <FieldLabel
-          className="mb-1.5 text-sm font-medium text-blue-100"
+          className="mb-1.5 text-sm font-medium text-neutral-100"
           htmlFor="newPassword"
         >
           New password
@@ -57,7 +57,7 @@ export const ResetPasswordForm = ({ token }: { token: string }) => {
       <button
         type="submit"
         disabled={pending}
-        className="w-full bg-white text-blue-700 font-semibold py-3 px-4 rounded-xl transition-all duration-200 hover:bg-blue-50 active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center shadow-lg shadow-black/10 mt-1"
+        className="w-full bg-white text-neutral-700 font-semibold py-3 px-4 rounded-xl transition-all duration-200 hover:bg-neutral-50 active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center shadow-lg shadow-black/10 mt-1"
       >
         {pending ? (
           <>

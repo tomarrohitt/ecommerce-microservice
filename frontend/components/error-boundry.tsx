@@ -39,7 +39,7 @@ export class ErrorBoundary extends React.Component<Props, State> {
           <Card className="max-w-md w-full">
             <CardContent className="text-center py-8">
               <div className="text-6xl mb-4">⚠️</div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+              <h2 className="text-2xl font-bold text-gray-600 mb-2">
                 Something went wrong
               </h2>
               <p className="text-gray-500 mb-6">

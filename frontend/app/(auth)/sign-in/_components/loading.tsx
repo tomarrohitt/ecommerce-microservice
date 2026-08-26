@@ -6,7 +6,7 @@ export default function Loading() {
     <div className="space-y-5">
       <Field className="gap-0">
         <FieldLabel
-          className="mb-1.5 text-sm font-medium text-blue-100"
+          className="mb-1.5 text-sm font-medium text-neutral-100"
           htmlFor="email"
         >
           Email address
@@ -25,11 +25,11 @@ export default function Loading() {
         <div className="flex items-center justify-between mb-1.5">
           <FieldLabel
             htmlFor="password"
-            className="text-sm font-medium text-blue-100"
+            className="text-sm font-medium text-neutral-100"
           >
             Password
           </FieldLabel>
-          <span className="text-xs text-blue-200 font-medium">
+          <span className="text-xs text-neutral-200 font-medium">
             Forgot password?
           </span>
         </div>
@@ -44,7 +44,7 @@ export default function Loading() {
 
       <button
         type="submit"
-        className="w-full bg-white text-blue-700 font-semibold py-3 px-4 rounded-xl flex items-center justify-center mt-2 opacity-70"
+        className="w-full bg-white text-neutral-700 font-semibold py-3 px-4 rounded-xl flex items-center justify-center mt-2 opacity-70"
       >
         Sign in
       </button>

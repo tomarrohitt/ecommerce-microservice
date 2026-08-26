@@ -24,7 +24,7 @@ export const Validate = ({ token }: { token: string }) => {
         <div className="size-14 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-5">
           <div className="size-5 rounded-full border-2 border-gray-200 border-t-gray-500 animate-spin" />
         </div>
-        <h2 className="text-base font-medium text-gray-900 mb-1.5">
+        <h2 className="text-base font-medium text-gray-600 mb-1.5">
           Verifying your email
         </h2>
         <p className="text-sm text-gray-500">
@@ -37,10 +37,10 @@ export const Validate = ({ token }: { token: string }) => {
   if (status === "success") {
     return (
       <div className="bg-white border border-gray-100 rounded-2xl p-8 text-center">
-        <div className="size-14 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-5">
-          <CheckCircleIcon className="size-6 text-green-600" />
+        <div className="size-14 rounded-full bg-neutral--50 flex items-center justify-center mx-auto mb-5">
+          <CheckCircleIcon className="size-6 text-neutral--600" />
         </div>
-        <h2 className="text-base font-medium text-gray-900 mb-1.5">
+        <h2 className="text-base font-medium text-gray-600 mb-1.5">
           Email confirmed
         </h2>
         <p className="text-sm text-gray-500 mb-5">
@@ -48,7 +48,7 @@ export const Validate = ({ token }: { token: string }) => {
         </p>
         <Link
           href="/"
-          className="flex items-center justify-center gap-2 w-full bg-gray-900 text-white
+          className="flex items-center justify-center gap-2 w-full bg-gray-600 text-white
                      text-sm font-medium py-2.5 rounded-xl hover:bg-gray-700 transition-colors"
         >
           Continue shopping
@@ -62,7 +62,7 @@ export const Validate = ({ token }: { token: string }) => {
       <div className="size-14 rounded-full bg-red-50 flex items-center justify-center mx-auto mb-5">
         <Link2OffIcon className="size-6 text-red-500" />
       </div>
-      <h2 className="text-base font-medium text-gray-900 mb-1.5">
+      <h2 className="text-base font-medium text-gray-600 mb-1.5">
         Verification failed
       </h2>
       <p className="text-sm text-gray-500 mb-5">

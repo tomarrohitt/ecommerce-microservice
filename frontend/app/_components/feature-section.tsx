@@ -36,16 +36,15 @@ export default function FeaturesSection() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
+        staggerChildren: 0.2,
       },
     },
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 20, scale: 0.95 },
+    hidden: { opacity: 0, scale: 0.95 },
     visible: {
       opacity: 1,
-      y: 0,
       scale: 1,
       transition: {
         type: "spring",
@@ -71,12 +70,11 @@ export default function FeaturesSection() {
               <motion.div
                 key={feature.id}
                 variants={itemVariants}
-                whileHover={{ y: -8 }}
-                className="group flex flex-col items-center text-center gap-4 p-8 rounded-2xl bg-white border border-transparent hover:border-blue-100 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 cursor-default"
+                className="group flex flex-col items-center text-center gap-4 p-8 rounded-2xl bg-white border border-transparent hover:border-neutral-100 shadow-sm hover:shadow-xl hover:shadow-neutral-500/10 transition-all duration-300 cursor-default"
               >
                 <div className="relative">
                   <motion.div
-                    className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300"
+                    className="w-16 h-16 rounded-full bg-neutral-50 flex items-center justify-center group-hover:bg-neutral-600 transition-colors duration-300"
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
@@ -84,13 +82,13 @@ export default function FeaturesSection() {
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6, ease: "backOut" }}
                     >
-                      <Icon className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                      <Icon className="w-7 h-7 text-neutral-600 group-hover:text-white transition-colors duration-300" />
                     </motion.div>
                   </motion.div>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-lg font-bold text-gray-600 mb-1 group-hover:text-neutral-600 transition-colors">
                     {feature.title}
                   </h3>
                   <p className="text-sm text-gray-500 leading-relaxed">

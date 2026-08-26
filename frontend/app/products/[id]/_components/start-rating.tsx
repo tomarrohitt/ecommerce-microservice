@@ -16,9 +16,9 @@ export function StarRating({
           key={i}
           className={`${sizeClass} ${
             i < Math.floor(rating)
-              ? "fill-yellow-400 text-yellow-400"
+              ? "fill-neutral-400 text-neutral-400"
               : i < rating
-                ? "fill-yellow-200 text-yellow-400"
+                ? "fill-neutral-200 text-neutral-400"
                 : "fill-gray-200 text-gray-200"
           }`}
         />

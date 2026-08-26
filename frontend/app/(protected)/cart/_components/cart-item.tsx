@@ -17,12 +17,12 @@ export function CartItem({ item, isUpdating }: CartItemProps) {
   const exceedsStock = item.quantity > item.product.stockQuantity;
 
   return (
-    <div className="relative bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200 p-6 flex space-x-4 border-2 border-transparent hover:border-blue-100">
+    <div className="relative bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200 p-6 flex space-x-4 border-2 border-transparent hover:border-neutral-100">
       <Link
         href={`/products/${item.productId}`}
         className="shrink-0 group relative"
       >
-        <div className="w-24 h-24 bg-linear-to-br from-blue-400 to-indigo-500 rounded-lg overflow-hidden ring-2 ring-transparent group-hover:ring-blue-300 transition-all duration-200">
+        <div className="w-24 h-24 bg-linear-to-br from-neutral-400 to-neutral-500 rounded-lg overflow-hidden ring-2 ring-transparent group-hover:ring-neutral-300 transition-all duration-200">
           {item.product.thumbnail ? (
             <Image
               src={item.product.thumbnail}
@@ -39,7 +39,7 @@ export function CartItem({ item, isUpdating }: CartItemProps) {
         </div>
         {isUpdating && (
           <div className="absolute inset-0 bg-white/80 rounded-lg flex items-center justify-center">
-            <Loader2 className="w-6 h-6 text-blue-500 animate-spin" />
+            <Loader2 className="w-6 h-6 text-neutral-500 animate-spin" />
           </div>
         )}
       </Link>
@@ -47,14 +47,16 @@ export function CartItem({ item, isUpdating }: CartItemProps) {
       <div className="flex-1 flex flex-col">
         <Link
           href={`/products/${item.productId}`}
-          className="font-semibold text-lg text-gray-900 hover:text-blue-500 transition-colors mb-1 line-clamp-2"
+          className="font-semibold text-lg text-neutral-600 hover:text-neutral-500 transition-colors mb-1 line-clamp-2"
         >
           {item.product.name}
         </Link>
 
-        <p className="text-2xl font-bold text-blue-500 mb-3">
+        <p className="text-2xl font-bold text-neutral-500 mb-3">
           ${formatPrice(item.product.price)}
-          <span className="text-sm text-gray-500 font-normal ml-2">/ item</span>
+          <span className="text-sm text-neutral-500 font-normal ml-2">
+            / item
+          </span>
         </p>
 
         {isOutOfStock ? (
@@ -84,8 +86,8 @@ export function CartItem({ item, isUpdating }: CartItemProps) {
           </div>
 
           <div className="text-right">
-            <p className="text-xs text-gray-500 mb-1">Item Total</p>
-            <p className="text-xl font-bold text-gray-900">
+            <p className="text-xs text-neutral-500 mb-1">Item Total</p>
+            <p className="text-xl font-bold text-neutral-600">
               ${formatPrice(item.product.price * item.quantity)}
             </p>
           </div>

@@ -9,7 +9,7 @@ export function AnimatedCart({ children }: { children: React.ReactNode }) {
       <motion.div
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="relative p-2 text-gray-600 hover:text-blue-600 transition-colors "
+        className="relative p-2 text-gray-600 hover:text-neutral-600 transition-colors "
       >
         <ShoppingCart className="w-6 h-6" />
         {children}

@@ -21,7 +21,7 @@ export default async function VerifyEmailPage({ searchParams }: PageProps) {
         <h1 className="text-2xl font-bold text-white tracking-tight mb-2">
           Check your inbox
         </h1>
-        <p className="text-blue-200 text-sm leading-relaxed mb-1">
+        <p className="text-neutral-200 text-sm leading-relaxed mb-1">
           We sent a verification link to
         </p>
         <p className="font-semibold text-white text-sm mb-7 truncate px-4">
@@ -29,7 +29,7 @@ export default async function VerifyEmailPage({ searchParams }: PageProps) {
         </p>
 
         <div className="p-5 bg-white/10 rounded-2xl border border-white/15 mb-7 text-left">
-          <p className="text-sm text-blue-200 mb-3">
+          <p className="text-sm text-neutral-200 mb-3">
             Didn&apos;t get it? Check your spam folder or request a new one.
           </p>
           <ResendMailButton email={email} />
@@ -37,18 +37,18 @@ export default async function VerifyEmailPage({ searchParams }: PageProps) {
 
         <Link
           href="/sign-in"
-          className="inline-flex items-center text-sm font-medium text-blue-200 hover:text-white transition-colors"
+          className="inline-flex items-center text-sm font-medium text-neutral-200 hover:text-white transition-colors"
         >
           <ArrowLeft className="h-3.5 w-3.5 mr-1.5" />
           Back to sign in
         </Link>
       </div>
 
-      <p className="text-center text-xs text-blue-300/60 mt-7 pt-7 border-t border-white/10">
+      <p className="text-center text-xs text-neutral-300/60 mt-7 pt-7 border-t border-white/10">
         Wrong email?{" "}
         <Link
           href="/sign-up"
-          className="text-blue-200 hover:text-white font-medium"
+          className="text-neutral-200 hover:text-white font-medium"
         >
           Create a new account
         </Link>

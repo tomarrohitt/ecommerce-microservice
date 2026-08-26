@@ -6,28 +6,22 @@ import { Order } from "@/types";
 
 interface OrderCardProps {
   order: Order;
-  index: number;
 }
 
-export function OrderCard({ order, index }: OrderCardProps) {
+export function OrderCard({ order }: OrderCardProps) {
   return (
     <Card className="hover:shadow-lg transition-shadow pt-0">
-      <CardHeader
-        className={`bg-gray-50 border-b pt-6 `}
-        style={{
-          animationDelay: `${100 + index * 300}ms`,
-        }}
-      >
-        <div className="flex flex-wrap items-center justify-between gap-4">
+      <CardHeader className="bg-neutral-50 border-b pt-3">
+        <div className="flex flex-wrap items-center justify-between">
           <div>
-            <p className="text-sm text-gray-500">Order ID</p>
-            <p className="font-mono font-semibold text-gray-900">
+            <p className="text-sm text-neutral-500">Order ID</p>
+            <p className="font-mono font-semibold text-neutral-600">
               {order.id.toUpperCase()}
             </p>
           </div>
           <div>
-            <p className="text-sm text-gray-500">Date</p>
-            <p className="font-medium text-gray-900">
+            <p className="text-sm text-neutral-500">Date</p>
+            <p className="font-medium text-neutral-600">
               {new Date(order.createdAt).toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "long",
@@ -36,27 +30,23 @@ export function OrderCard({ order, index }: OrderCardProps) {
             </p>
           </div>
           <div>
-            <p className="text-sm text-gray-500">Total</p>
-            <p className="text-lg font-bold text-blue-500">
+            <p className="text-sm text-neutral-500">Total</p>
+            <p className="text-lg font-semibold text-neutral-600">
               ${order.totalAmount}
             </p>
           </div>
-          <OrderStatusBadge status={order.status} />
+          <p className="font-semibold text-neutral-600">
+            {order.status.toUpperCase()}
+          </p>
         </div>
       </CardHeader>
       <CardContent>
         <OrderItemsList orderItems={order.items} status={order.status} />
-
-        <div
-          className={`bg-gray-50 rounded-lg p-4 mb-4 `}
-          style={{
-            animationDelay: `${120 + index * 300}ms`,
-          }}
-        >
-          <p className="text-sm font-semibold text-gray-700 mb-2">
+        <div className="bg-neutral-50 rounded-lg p-4 mb-4">
+          <p className="text-sm font-semibold text-neutral-700 mb-2">
             Shipping Address:
           </p>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-neutral-500">
             {order.shippingAddress.street}, {order.shippingAddress.city},{" "}
             {order.shippingAddress.state}, {order.shippingAddress.country},{" "}
             {order.shippingAddress.zipCode}

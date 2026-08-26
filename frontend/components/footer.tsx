@@ -36,8 +36,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-950 text-gray-300 pt-20 pb-10 overflow-hidden relative">
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-900/10 rounded-full blur-3xl -translate-y-1/2 pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-indigo-900/10 rounded-full blur-3xl translate-y-1/4 pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-neutral-600/10 rounded-full blur-3xl -translate-y-1/2 pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-neutral-600/10 rounded-full blur-3xl translate-y-1/4 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
@@ -55,7 +55,7 @@ export default function Footer() {
               {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
                 <div
                   key={i}
-                  className="p-2 bg-gray-900 rounded-full hover:bg-gray-800 transition-colors border border-gray-800"
+                  className="p-2 bg-gray-600 rounded-full hover:bg-gray-800 transition-colors border border-gray-800"
                 >
                   <Icon className="w-4 h-4" />
                 </div>
@@ -81,14 +81,14 @@ export default function Footer() {
                   <Mail />
                 </InputGroupAddon>
               </InputGroup>
-              <button className="mt-3 w-full bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium py-2.5 rounded-lg transition-colors">
+              <button className="mt-3 w-full bg-neutral-600 hover:bg-neutral-500 text-white text-sm font-medium py-2.5 rounded-lg transition-colors">
                 Subscribe
               </button>
             </form>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+        <div className="pt-8 border-t border-gray-600 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           <p>© {currentYear} E-Store Inc. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <div className="hover:text-gray-300 transition-colors">Terms</div>
@@ -114,7 +114,7 @@ function FooterColumn({
       <ul className="space-y-3">
         {links.map((link) => (
           <li key={link.name}>
-            <div className="group flex items-center gap-2 text-sm text-gray-400 hover:text-blue-400 transition-colors cursor-pointer">
+            <div className="group flex items-center gap-2 text-sm text-gray-400 hover:text-neutral-400 transition-colors cursor-pointer">
               <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
               <span className="group-hover:translate-x-1 transition-transform duration-300">
                 {link.name}

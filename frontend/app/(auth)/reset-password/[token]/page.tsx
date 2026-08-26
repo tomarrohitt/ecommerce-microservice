@@ -24,7 +24,7 @@ const ResetPasswordPage = async (props: Props) => {
         <h1 className="text-2xl font-bold text-white tracking-tight">
           Set new password
         </h1>
-        <p className="text-blue-200 text-sm mt-1.5">
+        <p className="text-neutral-200 text-sm mt-1.5">
           Must be at least 8 characters long.
         </p>
       </div>

@@ -29,7 +29,7 @@ export const ProductSearch = () => {
   return (
     <form
       onSubmit={onSubmit}
-      className={`relative max-w-2xl mx-auto delay-200`}
+      className="w-full relative max-w-2xl mx-auto delay-200"
     >
       <div className="relative group">
         <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400 z-10" />
@@ -38,7 +38,7 @@ export const ProductSearch = () => {
           value={value}
           onChange={(e) => setValue(e.target.value)}
           placeholder="Search for products"
-          className="w-full pl-16 pr-6 py-7 text-lg bg-white/95 backdrop-blur-xl border-2 border-white/50 rounded-2xl shadow-2xl shadow-black/10"
+          className="w-full pl-16 pr-6 py-7 text-lg"
         />
       </div>
     </form>
