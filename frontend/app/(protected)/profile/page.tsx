@@ -288,13 +288,7 @@ export default async function ProfilePage() {
                             Email Verification
                           </span>
                         </div>
-                        <p
-                          className={`font-semibold text-lg ${
-                            user.emailVerified
-                              ? "text-neutral--700"
-                              : "text-neutral-700"
-                          }`}
-                        >
+                        <p className="font-semibold text-lg text-neutral-700">
                           {user.emailVerified
                             ? "Your email is verified"
                             : "Email not verified"}
